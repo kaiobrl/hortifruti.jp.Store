@@ -17,6 +17,12 @@
         background-size: 20px 20px;
         background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
       }
+
+      @media (max-width: 640px) {
+        .produto-img {
+          height: 120px !important;
+        }
+      }
     </style>
     <script type="text/javascript" src="./index.js" defer=""></script>
     <link rel="stylesheet" href="./index.css">
@@ -25,12 +31,12 @@
   <body class="bg-gray-50">
     <!-- Cabeçalho -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-3 sm:py-4">
-          <div class="flex items-center">
-            <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Formato Livre Store</h1>
+      <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div class="flex flex-col sm:flex-row justify-between items-center py-3 sm:py-4 gap-2 sm:gap-0 w-full">
+          <div class="flex items-center w-full sm:w-auto justify-center sm:justify-start">
+            <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 text-center sm:text-left w-full sm:w-auto">Formato Livre Store</h1>
           </div>
-          <nav class="flex items-center space-x-3 sm:space-x-6 lg:space-x-8">
+          <nav class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 lg:gap-8 w-full sm:w-auto justify-center sm:justify-end">
             <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarHome()">Home</a>
             <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarProdutos()">Produtos</a>
             <div class="relative">
@@ -48,10 +54,10 @@
     <!-- Página Home -->
     <div id="home-page">
       <!-- Hero Section -->
-      <section class="bg-gray-800 text-white py-12 sm:py-16 lg:py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Bem-vindo ao Formato Livre Store</h2>
-          <p class="text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">Frutas e legumes, ao seu alcance.</p>
+      <section class="bg-gray-800 text-white py-8 sm:py-12 lg:py-20">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight">Bem-vindo ao Formato Livre Store</h2>
+          <p class="text-base sm:text-lg mb-4 sm:mb-8 max-w-2xl mx-auto">Frutas e legumes, ao seu alcance.</p>
           <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-lg text-base sm:text-lg transition duration-300 w-full sm:w-auto">
             Ver Produtos
           </button>
@@ -59,10 +65,10 @@
       </section>
 
       <!-- Produtos em Destaque -->
-      <section class="py-12 sm:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Produtos em Destaque</h3>
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <section class="py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <h3 class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800">Produtos em Destaque</h3>
+          <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
             <!-- Banana -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
@@ -111,10 +117,10 @@
 
     <!-- Página de Produtos -->
     <div id="produtos-page" class="hidden">
-      <section class="py-12 sm:py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Todos os Produtos</h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
+      <section class="py-8 sm:py-12">
+        <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+          <h3 class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800">Todos os Produtos</h3>
+          <div class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-6">
             <!-- Banana -->
             <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
@@ -205,38 +211,38 @@
 
     <!-- Página do Carrinho -->
     <div id="carrinho-page" class="hidden">
-      <section class="py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Seu Carrinho</h3>
+      <section class="py-10 sm:py-16">
+        <div class="max-w-2xl sm:max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
+          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Seu Carrinho</h3>
 
-          <div id="carrinho-items" class="space-y-4 mb-8">
-            <!-- Items do carrinho serão inseridos aqui -->
+          <div id="carrinho-items" class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+            <!-- Itens do carrinho serão inseridos aqui -->
           </div>
 
-          <div id="carrinho-vazio" class="text-center py-12">
-            <p class="text-xl text-gray-600 mb-4">Seu carrinho está vazio</p>
-            <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+          <div id="carrinho-vazio" class="text-center py-8 sm:py-12">
+            <p class="text-lg sm:text-xl text-gray-600 mb-4">Seu carrinho está vazio</p>
+            <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto">
               Continuar Comprando
             </button>
           </div>
 
           <div id="carrinho-resumo" class="hidden">
-            <div class="bg-white rounded-lg shadow-md p-6">
-              <div class="flex justify-between items-center text-xl font-bold mb-4">
+            <div class="bg-white rounded-lg shadow-md p-4 sm:p-6">
+              <div class="flex flex-col sm:flex-row justify-between items-center text-lg sm:text-xl font-bold mb-4 gap-2 sm:gap-0">
                 <span>Total:</span>
                 <span id="total-carrinho" class="text-green-600">R$ 0,00</span>
               </div>
 
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                <input type="text" placeholder="Seu nome" class="border rounded px-3 py-2" id="nome-cliente">
-                <input type="text" placeholder="DDD + Telefone" class="border rounded px-3 py-2" id="telefone-cliente">
+              <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 mb-4">
+                <input type="text" placeholder="Seu nome" class="border rounded px-3 py-2 w-full" id="nome-cliente">
+                <input type="text" placeholder="DDD + Telefone" class="border rounded px-3 py-2 w-full" id="telefone-cliente">
               </div>
 
-              <div class="flex gap-4">
-                <button onclick="limparCarrinho()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded">
+              <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+                <button onclick="limparCarrinho()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded w-full sm:w-auto">
                   Limpar Carrinho
                 </button>
-                <button onclick="finalizarCompra()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded flex-1">
+                <button onclick="finalizarCompra()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto flex-1">
                   Finalizar Compra
                 </button>
               </div>
@@ -248,11 +254,11 @@
 
     <!-- Página de Obrigado -->
     <div id="obrigado-page" class="hidden">
-      <section class="py-20">
-        <div class="max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <div class="text-6xl mb-8">✅</div>
-          <h3 class="text-3xl font-bold mb-4 text-gray-800">Pedido Realizado com Sucesso!</h3>
-          <p class="text-xl text-gray-600 mb-8">Obrigado por sua compra. Em breve entraremos em contato.</p>
+      <section class="py-16 sm:py-20">
+        <div class="max-w-2xl mx-auto text-center px-2 sm:px-6 lg:px-8">
+          <div class="text-5xl sm:text-6xl mb-6 sm:mb-8">✅</div>
+          <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-gray-800">Pedido Realizado com Sucesso!</h3>
+          <p class="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">Obrigado por sua compra. Em breve entraremos em contato.</p>
           <button onclick="voltarParaHome()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg">
             Voltar ao Início
           </button>
@@ -261,8 +267,8 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white py-6">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <footer class="bg-gray-800 text-white py-6 mt-8">
+      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
         <p>© 2025 Formato Livre Store. Todos os direitos reservados.</p>
       </div>
     </footer>
@@ -375,30 +381,26 @@
         carrinho.forEach(item => {
           const subtotal = item.preco * item.quantidade;
           total += subtotal;
-
           html += `
-                    <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
-                        <div class="flex items-center space-x-4">
-                            <div class="text-3xl">${getEmojiPorId(item.id)}</div>
-                            <div>
-                                <h4 class="font-semibold">${item.nome}</h4>
-                                <p class="text-gray-600">R$ ${item.preco.toFixed(2)}</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center space-x-2">
-                                <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade - 1})" 
-                                        class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">-</button>
-                                <span class="w-8 text-center">${item.quantidade}</span>
-                                <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade + 1})" 
-                                        class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">+</button>
-                            </div>
-                            <div class="text-lg font-semibold w-20 text-right">R$ ${subtotal.toFixed(2)}</div>
-                            <button onclick="removerDoCarrinho('${item.id}')" 
-                                    class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">Remover</button>
-                        </div>
-                    </div>
-                `;
+      <div class="bg-white rounded-lg shadow-md p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3 w-full sm:w-auto">
+          <div class="text-3xl">${getEmojiPorId(item.id)}</div>
+          <div>
+            <h4 class="font-semibold">${item.nome}</h4>
+            <p class="text-gray-600">R$ ${item.preco.toFixed(2)}</p>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between">
+          <div class="flex items-center gap-2">
+            <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade - 1})" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">-</button>
+            <span class="w-8 text-center">${item.quantidade}</span>
+            <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade + 1})" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">+</button>
+          </div>
+          <div class="text-lg font-semibold w-20 text-right">R$ ${subtotal.toFixed(2)}</div>
+          <button onclick="removerDoCarrinho('${item.id}')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm w-full sm:w-auto">Remover</button>
+        </div>
+      </div>
+    `;
         });
 
         carrinhoItems.innerHTML = html;
