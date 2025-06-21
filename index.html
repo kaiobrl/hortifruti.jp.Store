@@ -24,19 +24,20 @@
 
   <body class="bg-gray-50">
     <!-- Cabeçalho -->
-    <header class="bg-white shadow-sm">
+    <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center py-4">
+        <div class="flex justify-between items-center py-3 sm:py-4">
           <div class="flex items-center">
-            <h1 class="text-2xl font-bold text-gray-900">Formato Livre Store</h1>
+            <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">Formato Livre Store</h1>
           </div>
-          <nav class="flex items-center space-x-8">
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarHome()">Home</a>
-            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarProdutos()">Produtos</a>
+          <nav class="flex items-center space-x-3 sm:space-x-6 lg:space-x-8">
+            <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarHome()">Home</a>
+            <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarProdutos()">Produtos</a>
             <div class="relative">
-              <button class="text-gray-700 hover:text-blue-600 font-medium flex items-center" onclick="mostrarCarrinho()">
-                Carrinho
-                <span id="cart-count" class="ml-2 bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+              <button class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium flex items-center" onclick="mostrarCarrinho()">
+                <span class="hidden sm:inline">Carrinho</span>
+                <span class="sm:hidden">🛒</span>
+                <span id="cart-count" class="ml-1 sm:ml-2 bg-orange-500 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-xs sm:text-sm">0</span>
               </button>
             </div>
           </nav>
@@ -47,58 +48,58 @@
     <!-- Página Home -->
     <div id="home-page">
       <!-- Hero Section -->
-      <section class="bg-gray-800 text-white py-20">
+      <section class="bg-gray-800 text-white py-12 sm:py-16 lg:py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 class="text-4xl md:text-6xl font-bold mb-4">Bem-vindo ao Formato Livre Store</h2>
-          <p class="text-xl mb-8">Frutas e legumes, ao seu alcance.</p>
-          <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">Bem-vindo ao Formato Livre Store</h2>
+          <p class="text-lg sm:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto">Frutas e legumes, ao seu alcance.</p>
+          <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-lg text-base sm:text-lg transition duration-300 w-full sm:w-auto">
             Ver Produtos
           </button>
         </div>
       </section>
 
       <!-- Produtos em Destaque -->
-      <section class="py-16">
+      <section class="py-12 sm:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Produtos em Destaque</h3>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Produtos em Destaque</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             <!-- Banana -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-48 flex items-center justify-center">
-                <div class="text-6xl">🍌</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+                <div class="text-5xl sm:text-6xl">🍌</div>
               </div>
-              <div class="p-6">
-                <h4 class="text-xl font-semibold mb-2">Banana</h4>
-                <p class="text-2xl font-bold text-green-600 mb-4">R$ 5,00</p>
-                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-4 sm:p-6">
+                <h4 class="text-lg sm:text-xl font-semibold mb-2">Banana</h4>
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 5,00</p>
+                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
                   Ver Detalhes
                 </button>
               </div>
             </div>
 
             <!-- Melancia -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-48 flex items-center justify-center">
-                <div class="text-6xl">🍉</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+                <div class="text-5xl sm:text-6xl">🍉</div>
               </div>
-              <div class="p-6">
-                <h4 class="text-xl font-semibold mb-2">Melancia</h4>
-                <p class="text-2xl font-bold text-green-600 mb-4">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-4 sm:p-6">
+                <h4 class="text-lg sm:text-xl font-semibold mb-2">Melancia</h4>
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
                   Ver Detalhes
                 </button>
               </div>
             </div>
 
             <!-- Abacaxi -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-48 flex items-center justify-center">
-                <div class="text-6xl">🍍</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+                <div class="text-5xl sm:text-6xl">🍍</div>
               </div>
-              <div class="p-6">
-                <h4 class="text-xl font-semibold mb-2">Abacaxi</h4>
-                <p class="text-2xl font-bold text-green-600 mb-4">R$ 4,00</p>
-                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-4 sm:p-6">
+                <h4 class="text-lg sm:text-xl font-semibold mb-2">Abacaxi</h4>
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 4,00</p>
+                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
                   Ver Detalhes
                 </button>
               </div>
@@ -110,89 +111,89 @@
 
     <!-- Página de Produtos -->
     <div id="produtos-page" class="hidden">
-      <section class="py-16">
+      <section class="py-12 sm:py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Todos os Produtos</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Todos os Produtos</h3>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6">
             <!-- Banana -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🍌</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍌</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Banana</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 5,00</p>
-                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Banana</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 5,00</p>
+                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Melancia -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🍉</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍉</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Melancia</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Melancia</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Abacaxi -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🍍</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍍</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Abacaxi</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 4,00</p>
-                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Abacaxi</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 4,00</p>
+                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Coentro -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🌿</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🌿</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Coentro</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 3,00</p>
-                <button onclick="adicionarAoCarrinho('coentro', 'Coentro', 3.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Coentro</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 3,00</p>
+                <button onclick="adicionarAoCarrinho('coentro', 'Coentro', 3.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Alface -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🥬</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥬</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Alface</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('alface', 'Alface', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Alface</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('alface', 'Alface', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Cenoura -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden">
-              <div class="produto-img h-40 flex items-center justify-center">
-                <div class="text-5xl">🥕</div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥕</div>
               </div>
-              <div class="p-4">
-                <h4 class="text-lg font-semibold mb-2">Cenoura</h4>
-                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('cenoura', 'Cenoura', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Cenoura</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('cenoura', 'Cenoura', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
@@ -431,15 +432,36 @@
           return;
         }
 
-        // Aqui você poderia enviar os dados para um servidor
-        console.log('Pedido finalizado:', {
-          cliente: {
-            nome,
-            telefone
-          },
-          items: carrinho,
-          total: carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0)
+        // Calcular total
+        const total = carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
+
+        // Montar lista de produtos
+        let listaProdutos = '';
+        carrinho.forEach(item => {
+          const subtotal = item.preco * item.quantidade;
+          listaProdutos += `• ${item.nome} - Qtd: ${item.quantidade} - R$ ${subtotal.toFixed(2)}\n`;
         });
+
+        // Montar mensagem para WhatsApp
+        const mensagem = `🛒 *NOVO PEDIDO - Formato Livre Store*
+
+👤 *Cliente:* ${nome}
+📱 *Telefone:* ${telefone}
+
+📋 *Pedido:*
+${listaProdutos}
+💰 *Total:* R$ ${total.toFixed(2)}
+
+_Pedido realizado através do site._`;
+
+        // URL do WhatsApp (substitua pelo número desejado)
+        // Formato: 5511999999999 (código do país + DDD + número)
+        const numeroWhatsApp = '5583999999999'; // Substitua pelo seu número
+        const mensagemCodificada = encodeURIComponent(mensagem);
+        const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
+
+        // Abrir WhatsApp
+        window.open(urlWhatsApp, '_blank');
 
         // Mostrar página de obrigado
         document.getElementById('carrinho-page').classList.add('hidden');
