@@ -1,16 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formato Livre Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
       .produto-img {
         background-color: #f8f9fa;
-        background-image:
-          linear-gradient(45deg, #e9ecef 25%, transparent 25%),
+        background-image: linear-gradient(45deg, #e9ecef 25%, transparent 25%),
           linear-gradient(-45deg, #e9ecef 25%, transparent 25%),
           linear-gradient(45deg, transparent 75%, #e9ecef 75%),
           linear-gradient(-45deg, transparent 75%, #e9ecef 75%);
@@ -25,25 +23,52 @@
       }
     </style>
     <script type="text/javascript" src="./index.js" defer=""></script>
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./index.css" />
   </head>
 
   <body class="bg-gray-50">
     <!-- Cabeçalho -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <div class="flex flex-col sm:flex-row justify-between items-center py-3 sm:py-4 gap-2 sm:gap-0 w-full">
-          <div class="flex items-center w-full sm:w-auto justify-center sm:justify-start">
-            <h1 class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 text-center sm:text-left w-full sm:w-auto">Formato Livre Store</h1>
+        <div
+          class="flex flex-col sm:flex-row justify-between items-center py-3 sm:py-4 gap-2 sm:gap-0 w-full"
+        >
+          <div
+            class="flex items-center w-full sm:w-auto justify-center sm:justify-start"
+          >
+            <h1
+              class="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 text-center sm:text-left w-full sm:w-auto"
+            >
+              Formato Livre Store
+            </h1>
           </div>
-          <nav class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 lg:gap-8 w-full sm:w-auto justify-center sm:justify-end">
-            <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarHome()">Home</a>
-            <a href="#" class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarProdutos()">Produtos</a>
+          <nav
+            class="flex flex-col sm:flex-row items-center gap-2 sm:gap-6 lg:gap-8 w-full sm:w-auto justify-center sm:justify-end"
+          >
+            <a
+              href="#"
+              class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium"
+              onclick="mostrarHome()"
+              >Home</a
+            >
+            <a
+              href="#"
+              class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium"
+              onclick="mostrarProdutos()"
+              >Produtos</a
+            >
             <div class="relative">
-              <button class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium flex items-center" onclick="mostrarCarrinho()">
+              <button
+                class="text-sm sm:text-base text-gray-700 hover:text-blue-600 font-medium flex items-center"
+                onclick="mostrarCarrinho()"
+              >
                 <span class="hidden sm:inline">Carrinho</span>
                 <span class="sm:hidden">🛒</span>
-                <span id="cart-count" class="ml-1 sm:ml-2 bg-orange-500 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-xs sm:text-sm">0</span>
+                <span
+                  id="cart-count"
+                  class="ml-1 sm:ml-2 bg-orange-500 text-white rounded-full w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center text-xs sm:text-sm"
+                  >0</span
+                >
               </button>
             </div>
           </nav>
@@ -56,9 +81,18 @@
       <!-- Hero Section -->
       <section class="bg-gray-800 text-white py-8 sm:py-12 lg:py-20">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
-          <h2 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight">Bem-vindo ao Formato Livre Store</h2>
-          <p class="text-base sm:text-lg mb-4 sm:mb-8 max-w-2xl mx-auto">Frutas e legumes, ao seu alcance.</p>
-          <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-lg text-base sm:text-lg transition duration-300 w-full sm:w-auto">
+          <h2
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 leading-tight"
+          >
+            Bem-vindo ao Formato Livre Store
+          </h2>
+          <p class="text-base sm:text-lg mb-4 sm:mb-8 max-w-2xl mx-auto">
+            Frutas e legumes, ao seu alcance.
+          </p>
+          <button
+            onclick="mostrarProdutos()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:py-3 sm:px-8 rounded-lg text-base sm:text-lg transition duration-300 w-full sm:w-auto"
+          >
             Ver Produtos
           </button>
         </div>
@@ -67,45 +101,78 @@
       <!-- Produtos em Destaque -->
       <section class="py-8 sm:py-12">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <h3 class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800">Produtos em Destaque</h3>
-          <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8">
+          <h3
+            class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800"
+          >
+            Produtos em Destaque
+          </h3>
+          <div
+            class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-8"
+          >
             <!-- Banana -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-40 sm:h-48 flex items-center justify-center"
+              >
                 <div class="text-5xl sm:text-6xl">🍌</div>
               </div>
               <div class="p-4 sm:p-6">
                 <h4 class="text-lg sm:text-xl font-semibold mb-2">Banana</h4>
-                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 5,00</p>
-                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">
+                  R$ 5,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)"
+                  class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base"
+                >
                   Ver Detalhes
                 </button>
               </div>
             </div>
 
             <!-- Melancia -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-40 sm:h-48 flex items-center justify-center"
+              >
                 <div class="text-5xl sm:text-6xl">🍉</div>
               </div>
               <div class="p-4 sm:p-6">
                 <h4 class="text-lg sm:text-xl font-semibold mb-2">Melancia</h4>
-                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">
+                  R$ 6,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)"
+                  class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base"
+                >
                   Ver Detalhes
                 </button>
               </div>
             </div>
 
             <!-- Abacaxi -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-40 sm:h-48 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-40 sm:h-48 flex items-center justify-center"
+              >
                 <div class="text-5xl sm:text-6xl">🍍</div>
               </div>
               <div class="p-4 sm:p-6">
                 <h4 class="text-lg sm:text-xl font-semibold mb-2">Abacaxi</h4>
-                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">R$ 4,00</p>
-                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base">
+                <p class="text-xl sm:text-2xl font-bold text-green-600 mb-4">
+                  R$ 4,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)"
+                  class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 sm:py-3 px-4 rounded transition duration-300 text-sm sm:text-base"
+                >
                   Ver Detalhes
                 </button>
               </div>
@@ -119,87 +186,539 @@
     <div id="produtos-page" class="hidden">
       <section class="py-8 sm:py-12">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-          <h3 class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800">Todos os Produtos</h3>
-          <div class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-6">
+          <h3
+            class="text-xl sm:text-3xl font-bold text-center mb-6 sm:mb-12 text-gray-800"
+          >
+            Todos os Produtos
+          </h3>
+          <div
+            class="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-6"
+          >
             <!-- Banana -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🍌</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Banana</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 5,00</p>
-                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Banana
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 5,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Melancia -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🍉</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Melancia</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Melancia
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 6,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Abacaxi -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🍍</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Abacaxi</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 4,00</p>
-                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Abacaxi
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 4,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Coentro -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🌿</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Coentro</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 3,00</p>
-                <button onclick="adicionarAoCarrinho('coentro', 'Coentro', 3.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Coentro
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 3,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('coentro', 'Coentro', 3.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Alface -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🥬</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Alface</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('alface', 'Alface', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Alface
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 6,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('alface', 'Alface', 6.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
                   Adicionar
                 </button>
               </div>
             </div>
 
             <!-- Cenoura -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
                 <div class="text-3xl sm:text-4xl lg:text-5xl">🥕</div>
               </div>
               <div class="p-3 sm:p-4">
-                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Cenoura</h4>
-                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,00</p>
-                <button onclick="adicionarAoCarrinho('cenoura', 'Cenoura', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Cenoura
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 6,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('cenoura', 'Cenoura', 6.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Tomate -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍅</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Tomate
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 4,50
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('tomate', 'Tomate', 4.50)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Batata -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥔</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Batata
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 3,50
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('batata', 'Batata', 3.50)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Maçã -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍎</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Maçã
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 5,50
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('maca', 'Maçã', 5.50)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Laranja -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍊</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Laranja
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 4,20
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('laranja', 'Laranja', 4.20)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Uva -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍇</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Uva
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 7,00
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('uva', 'Uva', 7.00)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Pimentão -->
+            <div
+              class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="produto-img h-32 sm:h-40 flex items-center justify-center"
+              >
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🫑</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4
+                  class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate"
+                >
+                  Pimentão
+                </h4>
+                <p
+                  class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3"
+                >
+                  R$ 3,80
+                </p>
+                <button
+                  onclick="adicionarAoCarrinho('pimentao', 'Pimentão', 3.80)"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm"
+                >
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Pera -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍐</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Pera</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 4,80</p>
+                <button onclick="adicionarAoCarrinho('pera', 'Pera', 4.80)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Limão -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍋</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Limão</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 2,50</p>
+                <button onclick="adicionarAoCarrinho('limao', 'Limão', 2.50)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Morango -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍓</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Morango</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 7,90</p>
+                <button onclick="adicionarAoCarrinho('morango', 'Morango', 7.90)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Kiwi -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥝</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Kiwi</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 6,50</p>
+                <button onclick="adicionarAoCarrinho('kiwi', 'Kiwi', 6.50)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Manga -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥭</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Manga</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 5,20</p>
+                <button onclick="adicionarAoCarrinho('manga', 'Manga', 5.20)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Cebola -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🧅</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Cebola</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 3,10</p>
+                <button onclick="adicionarAoCarrinho('cebola', 'Cebola', 3.10)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Alho -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🧄</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Alho</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 2,90</p>
+                <button onclick="adicionarAoCarrinho('alho', 'Alho', 2.90)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Milho -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🌽</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Milho</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 3,60</p>
+                <button onclick="adicionarAoCarrinho('milho', 'Milho', 3.60)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Pepino -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥒</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Pepino</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 2,70</p>
+                <button onclick="adicionarAoCarrinho('pepino', 'Pepino', 2.70)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Berinjela -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍆</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Berinjela</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 4,10</p>
+                <button onclick="adicionarAoCarrinho('berinjela', 'Berinjela', 4.10)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Brocólis -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🥦</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Brócolis</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 5,30</p>
+                <button onclick="adicionarAoCarrinho('brocolis', 'Brócolis', 5.30)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Cogumelo -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🍄</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Cogumelo</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 8,00</p>
+                <button onclick="adicionarAoCarrinho('cogumelo', 'Cogumelo', 8.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Abóbora -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <div class="produto-img h-32 sm:h-40 flex items-center justify-center">
+                <div class="text-3xl sm:text-4xl lg:text-5xl">🎃</div>
+              </div>
+              <div class="p-3 sm:p-4">
+                <h4 class="text-sm sm:text-base lg:text-lg font-semibold mb-1 sm:mb-2 truncate">Abóbora</h4>
+                <p class="text-base sm:text-lg lg:text-xl font-bold text-green-600 mb-2 sm:mb-3">R$ 4,90</p>
+                <button onclick="adicionarAoCarrinho('abobora', 'Abóbora', 4.90)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-4 rounded transition duration-300 text-xs sm:text-sm">
                   Adicionar
                 </button>
               </div>
@@ -213,36 +732,63 @@
     <div id="carrinho-page" class="hidden">
       <section class="py-10 sm:py-16">
         <div class="max-w-2xl sm:max-w-4xl mx-auto px-2 sm:px-6 lg:px-8">
-          <h3 class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800">Seu Carrinho</h3>
+          <h3
+            class="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 text-gray-800"
+          >
+            Seu Carrinho
+          </h3>
 
           <div id="carrinho-items" class="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
             <!-- Itens do carrinho serão inseridos aqui -->
           </div>
 
           <div id="carrinho-vazio" class="text-center py-8 sm:py-12">
-            <p class="text-lg sm:text-xl text-gray-600 mb-4">Seu carrinho está vazio</p>
-            <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto">
+            <p class="text-lg sm:text-xl text-gray-600 mb-4">
+              Seu carrinho está vazio
+            </p>
+            <button
+              onclick="mostrarProdutos()"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto"
+            >
               Continuar Comprando
             </button>
           </div>
 
           <div id="carrinho-resumo" class="hidden">
             <div class="bg-white rounded-lg shadow-md p-4 sm:p-6">
-              <div class="flex flex-col sm:flex-row justify-between items-center text-lg sm:text-xl font-bold mb-4 gap-2 sm:gap-0">
+              <div
+                class="flex flex-col sm:flex-row justify-between items-center text-lg sm:text-xl font-bold mb-4 gap-2 sm:gap-0"
+              >
                 <span>Total:</span>
                 <span id="total-carrinho" class="text-green-600">R$ 0,00</span>
               </div>
 
               <div class="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4 mb-4">
-                <input type="text" placeholder="Seu nome" class="border rounded px-3 py-2 w-full" id="nome-cliente">
-                <input type="text" placeholder="DDD + Telefone" class="border rounded px-3 py-2 w-full" id="telefone-cliente">
+                <input
+                  type="text"
+                  placeholder="Seu nome"
+                  class="border rounded px-3 py-2 w-full"
+                  id="nome-cliente"
+                />
+                <input
+                  type="text"
+                  placeholder="DDD + Telefone"
+                  class="border rounded px-3 py-2 w-full"
+                  id="telefone-cliente"
+                />
               </div>
 
               <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
-                <button onclick="limparCarrinho()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded w-full sm:w-auto">
+                <button
+                  onclick="limparCarrinho()"
+                  class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded w-full sm:w-auto"
+                >
                   Limpar Carrinho
                 </button>
-                <button onclick="finalizarCompra()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto flex-1">
+                <button
+                  onclick="finalizarCompra()"
+                  class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded w-full sm:w-auto flex-1"
+                >
                   Finalizar Compra
                 </button>
               </div>
@@ -257,9 +803,16 @@
       <section class="py-16 sm:py-20">
         <div class="max-w-2xl mx-auto text-center px-2 sm:px-6 lg:px-8">
           <div class="text-5xl sm:text-6xl mb-6 sm:mb-8">✅</div>
-          <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-gray-800">Pedido Realizado com Sucesso!</h3>
-          <p class="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">Obrigado por sua compra. Em breve entraremos em contato.</p>
-          <button onclick="voltarParaHome()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg">
+          <h3 class="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4 text-gray-800">
+            Pedido Realizado com Sucesso!
+          </h3>
+          <p class="text-lg sm:text-xl text-gray-600 mb-6 sm:mb-8">
+            Obrigado por sua compra. Em breve entraremos em contato.
+          </p>
+          <button
+            onclick="voltarParaHome()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg"
+          >
             Voltar ao Início
           </button>
         </div>
@@ -267,9 +820,11 @@
     </div>
 
     <!-- Rodapé -->
-    <footer class="bg-gray-800 text-white py-6 mt-8">
-      <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
-        <p>© 2025 Formato Livre Store. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 text-white py-6 mt-8 w-full">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
+        <p class="text-sm sm:text-base leading-tight">
+          © 2025 Formato Livre Store. Todos os direitos reservados.
+        </p>
       </div>
     </footer>
 
@@ -279,24 +834,24 @@
 
       // Navegação entre páginas
       function mostrarHome() {
-        document.getElementById('home-page').classList.remove('hidden');
-        document.getElementById('produtos-page').classList.add('hidden');
-        document.getElementById('carrinho-page').classList.add('hidden');
-        document.getElementById('obrigado-page').classList.add('hidden');
+        document.getElementById("home-page").classList.remove("hidden");
+        document.getElementById("produtos-page").classList.add("hidden");
+        document.getElementById("carrinho-page").classList.add("hidden");
+        document.getElementById("obrigado-page").classList.add("hidden");
       }
 
       function mostrarProdutos() {
-        document.getElementById('home-page').classList.add('hidden');
-        document.getElementById('produtos-page').classList.remove('hidden');
-        document.getElementById('carrinho-page').classList.add('hidden');
-        document.getElementById('obrigado-page').classList.add('hidden');
+        document.getElementById("home-page").classList.add("hidden");
+        document.getElementById("produtos-page").classList.remove("hidden");
+        document.getElementById("carrinho-page").classList.add("hidden");
+        document.getElementById("obrigado-page").classList.add("hidden");
       }
 
       function mostrarCarrinho() {
-        document.getElementById('home-page').classList.add('hidden');
-        document.getElementById('produtos-page').classList.add('hidden');
-        document.getElementById('carrinho-page').classList.remove('hidden');
-        document.getElementById('obrigado-page').classList.add('hidden');
+        document.getElementById("home-page").classList.add("hidden");
+        document.getElementById("produtos-page").classList.add("hidden");
+        document.getElementById("carrinho-page").classList.remove("hidden");
+        document.getElementById("obrigado-page").classList.add("hidden");
         atualizarCarrinho();
       }
 
@@ -308,7 +863,7 @@
 
       // Funções do carrinho
       function adicionarAoCarrinho(id, nome, preco) {
-        const itemExistente = carrinho.find(item => item.id === id);
+        const itemExistente = carrinho.find((item) => item.id === id);
 
         if (itemExistente) {
           itemExistente.quantidade += 1;
@@ -317,7 +872,7 @@
             id: id,
             nome: nome,
             preco: preco,
-            quantidade: 1
+            quantidade: 1,
           });
         }
 
@@ -326,16 +881,22 @@
         // Mostrar feedback
         const button = event.target;
         const originalText = button.textContent;
-        button.textContent = 'Adicionado!';
-        button.className = button.className.replace('bg-blue-600', 'bg-green-600');
+        button.textContent = "Adicionado!";
+        button.className = button.className.replace(
+          "bg-blue-600",
+          "bg-green-600"
+        );
         setTimeout(() => {
           button.textContent = originalText;
-          button.className = button.className.replace('bg-green-600', 'bg-blue-600');
+          button.className = button.className.replace(
+            "bg-green-600",
+            "bg-blue-600"
+          );
         }, 1000);
       }
 
       function removerDoCarrinho(id) {
-        carrinho = carrinho.filter(item => item.id !== id);
+        carrinho = carrinho.filter((item) => item.id !== id);
         atualizarContadorCarrinho();
         atualizarCarrinho();
       }
@@ -346,7 +907,7 @@
           return;
         }
 
-        const item = carrinho.find(item => item.id === id);
+        const item = carrinho.find((item) => item.id === id);
         if (item) {
           item.quantidade = parseInt(novaQuantidade);
           atualizarContadorCarrinho();
@@ -355,30 +916,33 @@
       }
 
       function atualizarContadorCarrinho() {
-        const contador = carrinho.reduce((total, item) => total + item.quantidade, 0);
-        document.getElementById('cart-count').textContent = contador;
+        const contador = carrinho.reduce(
+          (total, item) => total + item.quantidade,
+          0
+        );
+        document.getElementById("cart-count").textContent = contador;
       }
 
       function atualizarCarrinho() {
-        const carrinhoItems = document.getElementById('carrinho-items');
-        const carrinhoVazio = document.getElementById('carrinho-vazio');
-        const carrinhoResumo = document.getElementById('carrinho-resumo');
-        const totalElement = document.getElementById('total-carrinho');
+        const carrinhoItems = document.getElementById("carrinho-items");
+        const carrinhoVazio = document.getElementById("carrinho-vazio");
+        const carrinhoResumo = document.getElementById("carrinho-resumo");
+        const totalElement = document.getElementById("total-carrinho");
 
         if (carrinho.length === 0) {
-          carrinhoItems.innerHTML = '';
-          carrinhoVazio.classList.remove('hidden');
-          carrinhoResumo.classList.add('hidden');
+          carrinhoItems.innerHTML = "";
+          carrinhoVazio.classList.remove("hidden");
+          carrinhoResumo.classList.add("hidden");
           return;
         }
 
-        carrinhoVazio.classList.add('hidden');
-        carrinhoResumo.classList.remove('hidden');
+        carrinhoVazio.classList.add("hidden");
+        carrinhoResumo.classList.remove("hidden");
 
-        let html = '';
+        let html = "";
         let total = 0;
 
-        carrinho.forEach(item => {
+        carrinho.forEach((item) => {
           const subtotal = item.preco * item.quantidade;
           total += subtotal;
           html += `
@@ -392,12 +956,20 @@
         </div>
         <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 w-full sm:w-auto justify-between">
           <div class="flex items-center gap-2">
-            <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade - 1})" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">-</button>
+            <button onclick="atualizarQuantidade('${item.id}', ${
+            item.quantidade - 1
+          })" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">-</button>
             <span class="w-8 text-center">${item.quantidade}</span>
-            <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade + 1})" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">+</button>
+            <button onclick="atualizarQuantidade('${item.id}', ${
+            item.quantidade + 1
+          })" class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">+</button>
           </div>
-          <div class="text-lg font-semibold w-20 text-right">R$ ${subtotal.toFixed(2)}</div>
-          <button onclick="removerDoCarrinho('${item.id}')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm w-full sm:w-auto">Remover</button>
+          <div class="text-lg font-semibold w-20 text-right">R$ ${subtotal.toFixed(
+            2
+          )}</div>
+          <button onclick="removerDoCarrinho('${
+            item.id
+          }')" class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm w-full sm:w-auto">Remover</button>
         </div>
       </div>
     `;
@@ -409,14 +981,40 @@
 
       function getEmojiPorId(id) {
         const emojis = {
-          'banana': '🍌',
-          'melancia': '🍉',
-          'abacaxi': '🍍',
-          'coentro': '🌿',
-          'alface': '🥬',
-          'cenoura': '🥕'
+          banana: "🍌",
+          melancia: "🍉",
+          abacaxi: "🍍",
+          coentro: "🌿",
+          alface: "🥬",
+          cenoura: "🥕",
+          tomate: "🍅",
+          batata: "🥔",
+          maca: "🍎",
+          laranja: "🍊",
+          uva: "🍇",
+          pimentao: "🌶️",
+          pera: "🍐",
+          limao: "🍋",
+          morango: "🍓",
+          kiwi: "🥝",
+          manga: "🥭",
+          cebola: "🧅",
+          alho: "🧄",
+          milho: "🌽",
+          pepino: "🥒",
+          berinjela: "🍆",
+          brocolis: "🥦",
+          cogumelo: "🍄",
+          abobora: "🎃",
+          repolho: "🥬",
+          cenoura_roxa: "🥕", // pode usar o mesmo emoji
+          batata_doce: "🍠",
+          tomate_cereja: "🍅",
+          maracuja: "🥭", // pode usar manga/maracujá
+          goiaba: "🍈", // melão como alternativa
+          // adicione mais conforme desejar
         };
-        return emojis[id] || '🍎';
+        return emojis[id] || "🍎";
       }
 
       function limparCarrinho() {
@@ -425,27 +1023,17 @@
         atualizarCarrinho();
       }
 
-      function finalizarCompra() {
-        const nome = document.getElementById('nome-cliente').value;
-        const telefone = document.getElementById('telefone-cliente').value;
+      function montarListaProdutos(carrinho) {
+        return carrinho
+          .map(
+            (item) =>
+              `• ${item.nome} - Qtd: ${item.quantidade} - R$ ${(item.preco * item.quantidade).toFixed(2)}`
+          )
+          .join('\n');
+      }
 
-        if (!nome || !telefone) {
-          alert('Por favor, preencha seu nome e telefone para finalizar a compra.');
-          return;
-        }
-
-        // Calcular total
-        const total = carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0);
-
-        // Montar lista de produtos
-        let listaProdutos = '';
-        carrinho.forEach(item => {
-          const subtotal = item.preco * item.quantidade;
-          listaProdutos += `• ${item.nome} - Qtd: ${item.quantidade} - R$ ${subtotal.toFixed(2)}\n`;
-        });
-
-        // Montar mensagem para WhatsApp
-        const mensagem = `🛒 *NOVO PEDIDO - Formato Livre Store*
+      function montarMensagemWhatsApp(nome, telefone, listaProdutos, total) {
+        return `🛒 *NOVO PEDIDO - Formato Livre Store*
 
 👤 *Cliente:* ${nome}
 📱 *Telefone:* ${telefone}
@@ -455,25 +1043,37 @@ ${listaProdutos}
 💰 *Total:* R$ ${total.toFixed(2)}
 
 _Pedido realizado através do site._`;
+      }
 
-        // URL do WhatsApp (substitua pelo número desejado)
-        // Formato: 5511999999999 (código do país + DDD + número)
-        const numeroWhatsApp = '5583999999999'; // Substitua pelo seu número
+      function finalizarCompra() {
+        const nome = document.getElementById("nome-cliente").value;
+        const telefone = document.getElementById("telefone-cliente").value;
+
+        if (!nome || !telefone) {
+          alert("Por favor, preencha seu nome e telefone para finalizar a compra.");
+          return;
+        }
+
+        const total = carrinho.reduce(
+          (total, item) => total + item.preco * item.quantidade,
+          0
+        );
+
+        const listaProdutos = montarListaProdutos(carrinho);
+        const mensagem = montarMensagemWhatsApp(nome, telefone, listaProdutos, total);
+
+        const numeroWhatsApp = "5583999999999"; // Substitua pelo seu número
         const mensagemCodificada = encodeURIComponent(mensagem);
         const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`;
 
-        // Abrir WhatsApp
-        window.open(urlWhatsApp, '_blank');
+        window.open(urlWhatsApp, "_blank");
 
-        // Mostrar página de obrigado
-        document.getElementById('carrinho-page').classList.add('hidden');
-        document.getElementById('obrigado-page').classList.remove('hidden');
+        document.getElementById("carrinho-page").classList.add("hidden");
+        document.getElementById("obrigado-page").classList.remove("hidden");
       }
 
       // Inicializar contador do carrinho
       atualizarContadorCarrinho();
     </script>
-
   </body>
-
 </html>
