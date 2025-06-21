@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formato Livre Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .produto-img {
+        background-color: #f8f9fa;
+        background-image:
+          linear-gradient(45deg, #e9ecef 25%, transparent 25%),
+          linear-gradient(-45deg, #e9ecef 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #e9ecef 75%),
+          linear-gradient(-45deg, transparent 75%, #e9ecef 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+      }
+    </style>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body class="bg-gray-50">
+    <!-- Cabeçalho -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <div class="flex items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Formato Livre Store</h1>
+          </div>
+          <nav class="flex items-center space-x-8">
+            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarHome()">Home</a>
+            <a href="#" class="text-gray-700 hover:text-blue-600 font-medium" onclick="mostrarProdutos()">Produtos</a>
+            <div class="relative">
+              <button class="text-gray-700 hover:text-blue-600 font-medium flex items-center" onclick="mostrarCarrinho()">
+                Carrinho
+                <span id="cart-count" class="ml-2 bg-orange-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm">0</span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Página Home -->
+    <div id="home-page">
+      <!-- Hero Section -->
+      <section class="bg-gray-800 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">Bem-vindo ao Formato Livre Store</h2>
+          <p class="text-xl mb-8">Frutas e legumes, ao seu alcance.</p>
+          <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+            Ver Produtos
+          </button>
+        </div>
+      </section>
+
+      <!-- Produtos em Destaque -->
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Produtos em Destaque</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Banana -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-48 flex items-center justify-center">
+                <div class="text-6xl">🍌</div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-xl font-semibold mb-2">Banana</h4>
+                <p class="text-2xl font-bold text-green-600 mb-4">R$ 5,00</p>
+                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Ver Detalhes
+                </button>
+              </div>
+            </div>
+
+            <!-- Melancia -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-48 flex items-center justify-center">
+                <div class="text-6xl">🍉</div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-xl font-semibold mb-2">Melancia</h4>
+                <p class="text-2xl font-bold text-green-600 mb-4">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Ver Detalhes
+                </button>
+              </div>
+            </div>
+
+            <!-- Abacaxi -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-48 flex items-center justify-center">
+                <div class="text-6xl">🍍</div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-xl font-semibold mb-2">Abacaxi</h4>
+                <p class="text-2xl font-bold text-green-600 mb-4">R$ 4,00</p>
+                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Ver Detalhes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Página de Produtos -->
+    <div id="produtos-page" class="hidden">
+      <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Todos os Produtos</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Banana -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🍌</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Banana</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 5,00</p>
+                <button onclick="adicionarAoCarrinho('banana', 'Banana', 5.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Melancia -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🍉</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Melancia</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('melancia', 'Melancia', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Abacaxi -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🍍</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Abacaxi</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 4,00</p>
+                <button onclick="adicionarAoCarrinho('abacaxi', 'Abacaxi', 4.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Coentro -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🌿</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Coentro</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 3,00</p>
+                <button onclick="adicionarAoCarrinho('coentro', 'Coentro', 3.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Alface -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🥬</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Alface</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('alface', 'Alface', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+
+            <!-- Cenoura -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+              <div class="produto-img h-40 flex items-center justify-center">
+                <div class="text-5xl">🥕</div>
+              </div>
+              <div class="p-4">
+                <h4 class="text-lg font-semibold mb-2">Cenoura</h4>
+                <p class="text-xl font-bold text-green-600 mb-3">R$ 6,00</p>
+                <button onclick="adicionarAoCarrinho('cenoura', 'Cenoura', 6.00)" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300">
+                  Adicionar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Página do Carrinho -->
+    <div id="carrinho-page" class="hidden">
+      <section class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h3 class="text-3xl font-bold text-center mb-12 text-gray-800">Seu Carrinho</h3>
+
+          <div id="carrinho-items" class="space-y-4 mb-8">
+            <!-- Items do carrinho serão inseridos aqui -->
+          </div>
+
+          <div id="carrinho-vazio" class="text-center py-12">
+            <p class="text-xl text-gray-600 mb-4">Seu carrinho está vazio</p>
+            <button onclick="mostrarProdutos()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded">
+              Continuar Comprando
+            </button>
+          </div>
+
+          <div id="carrinho-resumo" class="hidden">
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <div class="flex justify-between items-center text-xl font-bold mb-4">
+                <span>Total:</span>
+                <span id="total-carrinho" class="text-green-600">R$ 0,00</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <input type="text" placeholder="Seu nome" class="border rounded px-3 py-2" id="nome-cliente">
+                <input type="text" placeholder="DDD + Telefone" class="border rounded px-3 py-2" id="telefone-cliente">
+              </div>
+
+              <div class="flex gap-4">
+                <button onclick="limparCarrinho()" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded">
+                  Limpar Carrinho
+                </button>
+                <button onclick="finalizarCompra()" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded flex-1">
+                  Finalizar Compra
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Página de Obrigado -->
+    <div id="obrigado-page" class="hidden">
+      <section class="py-20">
+        <div class="max-w-2xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <div class="text-6xl mb-8">✅</div>
+          <h3 class="text-3xl font-bold mb-4 text-gray-800">Pedido Realizado com Sucesso!</h3>
+          <p class="text-xl text-gray-600 mb-8">Obrigado por sua compra. Em breve entraremos em contato.</p>
+          <button onclick="voltarParaHome()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg">
+            Voltar ao Início
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p>© 2025 Formato Livre Store. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script>
+      // Estado do carrinho
+      let carrinho = [];
+
+      // Navegação entre páginas
+      function mostrarHome() {
+        document.getElementById('home-page').classList.remove('hidden');
+        document.getElementById('produtos-page').classList.add('hidden');
+        document.getElementById('carrinho-page').classList.add('hidden');
+        document.getElementById('obrigado-page').classList.add('hidden');
+      }
+
+      function mostrarProdutos() {
+        document.getElementById('home-page').classList.add('hidden');
+        document.getElementById('produtos-page').classList.remove('hidden');
+        document.getElementById('carrinho-page').classList.add('hidden');
+        document.getElementById('obrigado-page').classList.add('hidden');
+      }
+
+      function mostrarCarrinho() {
+        document.getElementById('home-page').classList.add('hidden');
+        document.getElementById('produtos-page').classList.add('hidden');
+        document.getElementById('carrinho-page').classList.remove('hidden');
+        document.getElementById('obrigado-page').classList.add('hidden');
+        atualizarCarrinho();
+      }
+
+      function voltarParaHome() {
+        carrinho = [];
+        atualizarContadorCarrinho();
+        mostrarHome();
+      }
+
+      // Funções do carrinho
+      function adicionarAoCarrinho(id, nome, preco) {
+        const itemExistente = carrinho.find(item => item.id === id);
+
+        if (itemExistente) {
+          itemExistente.quantidade += 1;
+        } else {
+          carrinho.push({
+            id: id,
+            nome: nome,
+            preco: preco,
+            quantidade: 1
+          });
+        }
+
+        atualizarContadorCarrinho();
+
+        // Mostrar feedback
+        const button = event.target;
+        const originalText = button.textContent;
+        button.textContent = 'Adicionado!';
+        button.className = button.className.replace('bg-blue-600', 'bg-green-600');
+        setTimeout(() => {
+          button.textContent = originalText;
+          button.className = button.className.replace('bg-green-600', 'bg-blue-600');
+        }, 1000);
+      }
+
+      function removerDoCarrinho(id) {
+        carrinho = carrinho.filter(item => item.id !== id);
+        atualizarContadorCarrinho();
+        atualizarCarrinho();
+      }
+
+      function atualizarQuantidade(id, novaQuantidade) {
+        if (novaQuantidade <= 0) {
+          removerDoCarrinho(id);
+          return;
+        }
+
+        const item = carrinho.find(item => item.id === id);
+        if (item) {
+          item.quantidade = parseInt(novaQuantidade);
+          atualizarContadorCarrinho();
+          atualizarCarrinho();
+        }
+      }
+
+      function atualizarContadorCarrinho() {
+        const contador = carrinho.reduce((total, item) => total + item.quantidade, 0);
+        document.getElementById('cart-count').textContent = contador;
+      }
+
+      function atualizarCarrinho() {
+        const carrinhoItems = document.getElementById('carrinho-items');
+        const carrinhoVazio = document.getElementById('carrinho-vazio');
+        const carrinhoResumo = document.getElementById('carrinho-resumo');
+        const totalElement = document.getElementById('total-carrinho');
+
+        if (carrinho.length === 0) {
+          carrinhoItems.innerHTML = '';
+          carrinhoVazio.classList.remove('hidden');
+          carrinhoResumo.classList.add('hidden');
+          return;
+        }
+
+        carrinhoVazio.classList.add('hidden');
+        carrinhoResumo.classList.remove('hidden');
+
+        let html = '';
+        let total = 0;
+
+        carrinho.forEach(item => {
+          const subtotal = item.preco * item.quantidade;
+          total += subtotal;
+
+          html += `
+                    <div class="bg-white rounded-lg shadow-md p-4 flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-3xl">${getEmojiPorId(item.id)}</div>
+                            <div>
+                                <h4 class="font-semibold">${item.nome}</h4>
+                                <p class="text-gray-600">R$ ${item.preco.toFixed(2)}</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex items-center space-x-2">
+                                <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade - 1})" 
+                                        class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">-</button>
+                                <span class="w-8 text-center">${item.quantidade}</span>
+                                <button onclick="atualizarQuantidade('${item.id}', ${item.quantidade + 1})" 
+                                        class="bg-gray-200 hover:bg-gray-300 w-8 h-8 rounded flex items-center justify-center">+</button>
+                            </div>
+                            <div class="text-lg font-semibold w-20 text-right">R$ ${subtotal.toFixed(2)}</div>
+                            <button onclick="removerDoCarrinho('${item.id}')" 
+                                    class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded text-sm">Remover</button>
+                        </div>
+                    </div>
+                `;
+        });
+
+        carrinhoItems.innerHTML = html;
+        totalElement.textContent = `R$ ${total.toFixed(2)}`;
+      }
+
+      function getEmojiPorId(id) {
+        const emojis = {
+          'banana': '🍌',
+          'melancia': '🍉',
+          'abacaxi': '🍍',
+          'coentro': '🌿',
+          'alface': '🥬',
+          'cenoura': '🥕'
+        };
+        return emojis[id] || '🍎';
+      }
+
+      function limparCarrinho() {
+        carrinho = [];
+        atualizarContadorCarrinho();
+        atualizarCarrinho();
+      }
+
+      function finalizarCompra() {
+        const nome = document.getElementById('nome-cliente').value;
+        const telefone = document.getElementById('telefone-cliente').value;
+
+        if (!nome || !telefone) {
+          alert('Por favor, preencha seu nome e telefone para finalizar a compra.');
+          return;
+        }
+
+        // Aqui você poderia enviar os dados para um servidor
+        console.log('Pedido finalizado:', {
+          cliente: {
+            nome,
+            telefone
+          },
+          items: carrinho,
+          total: carrinho.reduce((total, item) => total + (item.preco * item.quantidade), 0)
+        });
+
+        // Mostrar página de obrigado
+        document.getElementById('carrinho-page').classList.add('hidden');
+        document.getElementById('obrigado-page').classList.remove('hidden');
+      }
+
+      // Inicializar contador do carrinho
+      atualizarContadorCarrinho();
+    </script>
+
+  </body>
+
+</html>
